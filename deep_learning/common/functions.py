@@ -22,7 +22,7 @@ def softmax(x):
 
     return x
 
-def cross_entopy_error(y, t):
+def cross_entropy_error(y, t):
     if y.ndim == 1:
         t = t.reshape(1, t.size)
         y = y.reshape(1, y.size)
@@ -36,3 +36,4 @@ def cross_entopy_error(y, t):
     loss = -np.sum(cross_entropy) / batch_size
 
     return loss
+

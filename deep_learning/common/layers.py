@@ -1,5 +1,5 @@
 import numpy as np
-from functions import softmax, cross_entopy_error
+from common.functions import softmax, cross_entropy_error
 
 
 # Matmul
@@ -62,7 +62,7 @@ class Affine():
         self.grads[1][...] = db
         return dx
 
-class SoftmaxWithLoos:
+class SoftmaxWithLoos():
     def __init__(self):
         self.params, self.grads = [], []
         self.y = None # softmax의 출력
@@ -77,7 +77,7 @@ class SoftmaxWithLoos:
         if self.t.size == self.y.size:
             self.t = self.t.argmax(axis=1)
         
-        loss = cross_entopy_error(self.y, self.t)
+        loss = cross_entropy_error(self.y, self.t)
         return loss
     
     def backward(self, dout=1):
@@ -89,3 +89,4 @@ class SoftmaxWithLoos:
         dx /= batch_size
 
         return dx
+    
