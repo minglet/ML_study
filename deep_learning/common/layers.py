@@ -3,7 +3,7 @@ from common.functions import softmax, cross_entropy_error
 
 
 # Matmul
-class Matmul():
+class Matmul:
     def __init__(self, W) -> None:
         self.params = [W]
         self.grads = [np.zeros_like(W)]
@@ -24,7 +24,7 @@ class Matmul():
         return dx
 
 # Simoid
-class Sigmoid():
+class Sigmoid:
     def __init__(self) -> None:
         self.params = []
         self.grads = []
@@ -40,13 +40,13 @@ class Sigmoid():
         return dx
 
 # Affine
-class Affine():
+class Affine:
     def __init__(self, W, b) -> None:
         self.params = [W, b]
         self.grads = [np.zeros_like(W), np.zeros_like(b)]
         self.x = None
     
-    def forward(self, x, out):
+    def forward(self, x):
         W, b = self.params
         out = np.matmul(x, W) + b
         self.x = x
@@ -62,7 +62,7 @@ class Affine():
         self.grads[1][...] = db
         return dx
 
-class SoftmaxWithLoos():
+class SoftmaxWithLoss:
     def __init__(self):
         self.params, self.grads = [], []
         self.y = None # softmax의 출력
