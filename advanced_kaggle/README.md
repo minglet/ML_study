@@ -1,0 +1,2 @@
+### 캐글 Advanced 머신러닝 실전
+['캐글 Advanced 머신러닝 실전'](https://www.inflearn.com/course/%EC%BA%90%EA%B8%80-%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EC%8B%A4%EC%A0%84/dashboard) 강의를 수강하고 코드 복습을 위해 만들어진 레포지토리 입니다. 
